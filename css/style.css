@@ -1,90 +1,115 @@
 @font-face {
     font-family: 'Lato';
-    src: url('Lato-Black'),
-            url('Lato-BlackItalic'),
-            url('Lato-Bold'),
-            url('Lato-BoldItalic'),
-            url('Lato-Light'),
-            url('Lato-LightItalic'),
-            url('Lato-Regular'),
-            url('Lato-RegularItalic'),
-            url('Lato-Thin'),
-            url('Lato-ThinItalic')  format('truetype');
-  }
-
-* {
-    font-family: 'Lato', sans-serif;
+    src: url('../fonts/Lato/Lato-Black.ttf'),
+        url('../fonts/Lato/Lato-BlackItalic.ttf'),
+        url('../fonts/Lato/Lato-Bold.ttf'),
+        url('../fonts/Lato/Lato-BoldItalic.ttf'),
+        url('../fonts/Lato/Lato-Light.ttf'),
+        url('../fonts/Lato/Lato-LightItalic.ttf'),
+        url('../fonts/Lato/Lato-Regular.ttf'),
+        url('../fonts/Lato/Lato-RegularItalic.ttf'),
+        url('../fonts/Lato/Lato-Thin.ttf'),
+        url('../fonts/Lato/Lato-ThinItalic.ttf')  format('truetype');
 }
-body{
+
+@font-face {
+    font-family: 'Caveat';
+    src: url('../fonts/Caveat/Caveat-Bold.ttf'),
+         url('../fonts/Caveat/Caveat-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Open Sans';
+    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf'),
+        url('../fonts/Open_Sans/OpenSans-BoldItalic.ttf'),
+        url('../fonts/Open_Sans/OpenSans-ExtraBold.ttf'),
+        url('../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf'),
+        url('../fonts/Open_Sans/OpenSans-Light.ttf'),
+        url('../fonts/Open_Sans/OpenSans-LightItalic.ttf'),
+        url('../fonts/Open_Sans/OpenSans-Regular.ttf'),
+        url('../fonts/Open_Sans/OpenSans-RegularItalic.ttf'),
+        url('../fonts/Open_Sans/OpenSans-SemiBold.ttf'),
+        url('../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('truetype');
+}
+html {
+    font-size: calc(1em + 1vw)
+}
+body {
     background-color: #2b2c2c;
-    color: #fff;
+    font-family: 'Lato',
+    sans-serif;
 }
 
-.container{
-    background-color: rgba(255, 255, 255, 0.988);
+.container {
+    background-color: rgb(40, 40, 33);
     display: grid;
-    grid-template-areas: "header"
-                          "main"
-                          "footer";
-    grid-template-columns: auto;
-    grid-template-rows: repeat(3, 35% 50% 35%);
-    height: 100vh;
+    grid-auto-rows: 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 1fr);
     margin: 0 auto;
     max-width: 1276px;
 }
 
 .header {
-    background-color: rgb(40, 40, 33);
     display: grid;
-    grid-area: header;
-    grid-template-columns: repeat(2, 1fr);
-}
-.header .left, .header .right{
-    padding: 1rem;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    padding: 2rem 1rem;
 }
 
-.left{
+.header .section-one {
     align-items: center;
     display: flex;
     justify-content: center;
 }
-.left figure {
+
+.header .section-one figure {
     display: flex;
-    flex-flow: column;
-    margin: auto;
+    margin: 1rem;
     max-width: 220px;
-    padding: 5px;
+    padding: 1rem;
 }
-.left figure img {
+
+.header .section-one figure img {
     border-radius: 50%;
     padding: 1rem;
     width: 100%;
-} 
+}
 
-.right{
+.header .section-two {
     align-items: center;
     display: flex;
     justify-content: center;
 }
-.right p {
-    font-family: Lato, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 200%;
-    line-height: 1.75;
+
+.header .section-two .work {
+    font-family: 'Caveat', cursive;
+    line-height: 1.5;
 }
-.right .job {
+
+.header .section-two .work .name {
+    color: #fff;
+    font-size: 2rem;
+    padding: 0;
+    margin: 0;
+}
+
+.header .section-two .work .description {
     color: #e0a80d;
-    font-size: 70%
+    font-size: 1rem;
+    padding: 0;
+    margin: 0;
 }
+
 .main {
+    background-color: rgb(94, 94, 23);
     display: grid;
-    grid-area: main;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
 }
 
 .footer {
+    background-color: rgb(54, 54, 23);
     display: grid;
-    grid-area: footer;
     grid-template-columns: repeat(2, 1fr);
     padding: 1rem;
 }
