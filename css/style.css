@@ -32,8 +32,9 @@
         url('../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('truetype');
 }
 html {
-    font-size: calc(1em + 1vw)
+    font-size: calc(1em + 1vw);
 }
+
 body {
     background-color: #2b2c2c;
     font-family: 'Lato',
@@ -63,15 +64,13 @@ body {
 }
 
 .header .section-one figure {
-    display: flex;
     margin: 1rem;
-    max-width: 220px;
+    max-width: calc(3em + 10vw);
     padding: 1rem;
 }
 
 .header .section-one figure img {
     border-radius: 50%;
-    padding: 1rem;
     width: 100%;
 }
 
@@ -89,15 +88,15 @@ body {
 .header .section-two .work .name {
     color: #fff;
     font-size: 2rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .header .section-two .work .description {
     color: #e0a80d;
     font-size: 1rem;
-    padding: 0;
     margin: 0;
+    padding: 0;
 }
 
 .main {
