@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Lato';
-    src: url('../fonts/Lato/Lato-Black.ttf'),
+    src: url('../fonts/Lato/Lato-Light.ttf'),
         url('../fonts/Lato/Lato-BlackItalic.ttf'),
         url('../fonts/Lato/Lato-Bold.ttf'),
         url('../fonts/Lato/Lato-BoldItalic.ttf'),
-        url('../fonts/Lato/Lato-Light.ttf'),
+        url('../fonts/Lato/Lato-Black.ttf'),
         url('../fonts/Lato/Lato-LightItalic.ttf'),
         url('../fonts/Lato/Lato-Regular.ttf'),
         url('../fonts/Lato/Lato-RegularItalic.ttf'),
@@ -20,35 +20,39 @@
 
 @font-face {
     font-family: 'Open Sans';
-    src: url('../fonts/Open_Sans/OpenSans-Bold.ttf'),
+    src: url('../fonts/Open_Sans/OpenSans-Light.ttf'),
         url('../fonts/Open_Sans/OpenSans-BoldItalic.ttf'),
         url('../fonts/Open_Sans/OpenSans-ExtraBold.ttf'),
         url('../fonts/Open_Sans/OpenSans-ExtraBoldItalic.ttf'),
-        url('../fonts/Open_Sans/OpenSans-Light.ttf'),
+        url('../fonts/Open_Sans/OpenSans-Bold.ttf'),
         url('../fonts/Open_Sans/OpenSans-LightItalic.ttf'),
         url('../fonts/Open_Sans/OpenSans-Regular.ttf'),
         url('../fonts/Open_Sans/OpenSans-RegularItalic.ttf'),
         url('../fonts/Open_Sans/OpenSans-SemiBold.ttf'),
         url('../fonts/Open_Sans/OpenSans-SemiBoldItalic.ttf') format('truetype');
 }
-html {
+
+/* html {
     font-size: calc(1em + 1vw);
-}
+} */
 
 body {
-    background-color: #2b2c2c;
-    font-family: 'Lato',
-    sans-serif;
+    background-color: #2d2e2e;
+    font-family: 'Lato', sans-serif;
+    color: #fff;
+    max-height: 100vh;
 }
 
 .container {
-    background-color: rgb(40, 40, 33);
+    background-color: #1D1E25;
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, auto);
     margin: 0 auto;
+    padding: 1rem;
     max-width: 1276px;
+    height: 100vh;
 }
 
 .header {
@@ -65,7 +69,7 @@ body {
 
 .header .section-one figure {
     margin: 1rem;
-    max-width: calc(3em + 10vw);
+    max-width: 170px;
     padding: 1rem;
 }
 
@@ -87,28 +91,60 @@ body {
 
 .header .section-two .work .name {
     color: #fff;
-    font-size: 2rem;
+    font-size: 3.6rem;
     margin: 0;
     padding: 0;
 }
 
 .header .section-two .work .description {
-    color: #e0a80d;
-    font-size: 1rem;
+    color: #F7832A;
+    font-size: 1.8rem;
     margin: 0;
     padding: 0;
 }
 
-.main {
-    background-color: rgb(94, 94, 23);
+.content {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 1rem;
 }
 
+.content .about-me {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+
+.content .about-me .title {
+    color: #fff;
+}
+
+.content .about-me .description {
+    font-size: 1rem;
+    color: #1C77C3;
+}
+
+.content .work-experience {
+    font-family: 'Lato', sans-serif;
+    font-weight: lighter;
+}
+
+.content .work-experience .title {
+    color: #fff;
+}
+
+.content .work-experience .description {
+    font-size: 1rem;
+    color: #1C77C3;
+}
+
 .footer {
-    background-color: rgb(54, 54, 23);
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 1rem;
+    align-content: flex-end;
+}
+
+.footer .details {
+    display: flex;
+    justify-content: space-between;
 }
