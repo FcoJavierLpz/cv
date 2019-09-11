@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development",
-    "build": "webpack --config ./webpack.config.js --mode production"
+    "dev": "webpack-dev-server --config ./webpack.config.js --mode development --colors --open",
+    "build": "webpack --config ./webpack.config.js --mode production --colors --open"
   },
   "repository": {
     "type": "git",
@@ -24,11 +24,9 @@
   "homepage": "https://github.com/FcoJavierLpz/cv#readme",
   "devDependencies": {
     "css-loader": "^3.2.0",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.8.0",
     "node-sass": "^4.12.0",
-    "postcss-loader": "^3.0.0",
-    "resolve-url-loader": "^3.1.0",
-    "sass": "^1.23.0-module.beta.1",
     "sass-loader": "^8.0.0",
     "style-loader": "^1.0.0",
     "webpack": "^4.39.3",
