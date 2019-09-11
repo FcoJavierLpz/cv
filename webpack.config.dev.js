@@ -16,9 +16,7 @@ module.exports = {
       use: [{
           // Creates `style` nodes from JS strings
           // fallback to style-loader in development
-          loader: process.env.NODE_ENV !== 'production' ?
-            'style-loader' :
-            MiniCssExtractPlugin.loader,
+          loader: 'style-loader'
         },
         {
           // Translates CSS into CommonJS
