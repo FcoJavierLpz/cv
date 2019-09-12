@@ -4,13 +4,13 @@
 } */
 
 body {
-    background-color: #2e2d2d;
+    background-color: $color-background-primary;
     font-family: 'Lato', sans-serif;
-    color: #fff;
+    color: $color-description;
   }
 
   .container {
-    background-color: #1D1E25;
+    background-color: $color-background-secondary;
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
@@ -55,14 +55,14 @@ body {
   }
 
   .header .section-two .work .name {
-    color: #fff;
+    color: $color-title;
     font-size: 3.6rem;
     margin: 0;
     padding: 0;
   }
 
   .header .section-two .work .description {
-    color: #F7832A;
+    color: $color-subtitle;
     font-size: 1.8rem;
     margin: 0;
     padding: 0;
@@ -80,12 +80,12 @@ body {
   }
 
   .content .about-me .title {
-    color: #fff;
+    color: $color-title;
   }
 
   .content .about-me .description {
     font-size: 1rem;
-    color: #1C77C3;
+    color: $color-description;
   }
 
   .content .work-experience {
@@ -94,12 +94,12 @@ body {
   }
 
   .content .work-experience .title {
-    color: #fff;
+    color: $color-title;
   }
 
   .content .work-experience .description {
     font-size: 1rem;
-    color: #1C77C3;
+    color: $color-description;
   }
 
   .footer {

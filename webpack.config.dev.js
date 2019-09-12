@@ -4,6 +4,7 @@ const path = require('path'),
 
 module.exports = {
   mode: 'development',
+  devtool: 'eval-source-map',
   entry: './src/js/index.js',
   output: {
     filename: './js/bundle.js',
@@ -44,7 +45,7 @@ module.exports = {
   ],
   devServer: {
     compress: true,
-    port: 8080,
+    port: 8888,
     inline: true
   },
   // Default mode for Webpack is production.
