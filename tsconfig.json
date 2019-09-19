@@ -1,0 +1,16 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/js",
+        "noImplicitAny": true,
+        "module": "es6",
+        "target": "es5",
+        "sourceMap": true,
+        "allowJs": true
+    },
+    "include": [
+        "src/js/*", "custom.d.ts"
+    ],
+    "exclude": [
+        "node_modules"
+    ]
+}
