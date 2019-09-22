@@ -5,12 +5,11 @@
 
 body {
     background-color: $color-background-primary;
-    font-family: 'Lato', sans-serif;
+    font-family: $font-text;
     color: $color-description;
   }
 
   .container {
-    background-color: $color-background-secondary;
     display: grid;
     grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
@@ -30,76 +29,81 @@ body {
     align-items: center;
     display: flex;
     justify-content: center;
-  }
-
-  .header .section-one figure {
-    margin: 1rem;
-    max-width: 170px;
-    padding: 1rem;
-  }
-
-  .header .section-one figure img {
-    border-radius: 50%;
-    width: 100%;
+    figure {
+      margin: 1rem;
+      max-width: 235px;
+      padding: 1rem;
+      img {
+        border-radius: 50%;
+        width: 100%;
+        //filter: brightness(0.4);
+        //filter: contrast(200%);
+        //filter: drop-shadow(16px 16px 20px blue);
+        filter:grayscale(100%) drop-shadow(0 0 10px #000) brightness(90%);
+        -webkit-filter:grayscale(100%) drop-shadow(0 0 10px #000) brightness(90%);
+}
+    }
   }
 
   .header .section-two {
     align-items: center;
     display: flex;
     justify-content: center;
-  }
-
-  .header .section-two .work {
-    font-family: 'Caveat', cursive;
-    line-height: 1.5;
-  }
-
-  .header .section-two .work .name {
-    color: $color-title;
-    font-size: 3.6rem;
-    margin: 0;
-    padding: 0;
-  }
-
-  .header .section-two .work .description {
-    color: $color-subtitle;
-    font-size: 1.8rem;
-    margin: 0;
-    padding: 0;
+    .profile {
+      font-family: $font-header;
+      line-height: 1.5;
+      .name {
+        color: $color-title;
+        font-size: 3.6rem;
+        margin: 0;
+        padding: 0;
+      }
+      .description {
+        color: $color-subtitle;
+        font-size: 1.8rem;
+        margin: 0;
+        padding: 0;
+      }
+    }
   }
 
   .content {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 1rem;
-  }
-
-  .content .about-me {
-    font-family: 'Lato', sans-serif;
-    font-weight: lighter;
-  }
-
-  .content .about-me .title {
-    color: $color-title;
-  }
-
-  .content .about-me .description {
-    font-size: 1rem;
-    color: $color-description;
-  }
-
-  .content .work-experience {
-    font-family: 'Lato', sans-serif;
-    font-weight: lighter;
-  }
-
-  .content .work-experience .title {
-    color: $color-title;
-  }
-
-  .content .work-experience .description {
-    font-size: 1rem;
-    color: $color-description;
+    .about-me {
+      font-family: $font-text;
+      font-weight: lighter;
+      .title {
+        color: $color-title;
+      }
+      .description {
+        font-size: 1rem;
+        color: $color-description;
+      }
+    }
+    .work-experience {
+      font-family: $font-text;
+      font-weight: lighter;
+      .title {
+        color: $color-title;
+      }
+      .description {
+        position: relative;
+        font-size: 1rem;
+        color: $color-description;
+      }
+    }
+    .bullet{
+      height: 10px;
+      width: 10px;
+      position: static;
+      //left: -31px;
+      //top: 3px;
+      border-radius: 50%;
+      background:#e0a80d;
+      box-shadow:0 0 0 6px #2d2e2e;
+    }
   }
 
   .footer {
@@ -107,9 +111,8 @@ body {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     padding: 1rem;
     align-content: flex-end;
-  }
-
-  .footer .details {
-    display: flex;
-    justify-content: space-between;
+    .details {
+      display: flex;
+      justify-content: space-between;
+    }  
   }
