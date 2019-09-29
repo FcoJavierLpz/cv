@@ -1,12 +1,7 @@
-
-/* html {
-  font-size: calc(1em + 1vw);
-} */
-
 body {
     background-color: $color-background-primary;
-    font-family: $font-text;
     color: $color-description;
+    font-family: $font-text;
     line-height: 1.75;
   }
 
@@ -16,8 +11,8 @@ body {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     margin: 0 auto;
-    padding: 1rem;
     max-width: 1276px;
+    padding: 1rem;
   }
 
   .header {
@@ -36,13 +31,10 @@ body {
       padding: 1rem;
       img {
         border-radius: 50%;
+        filter:grayscale(100%) drop-shadow(0 0 10px #000) brightness(100%);
+        -webkit-filter:grayscale(100%) drop-shadow(0 0 10px #000) brightness(100%);
         width: 100%;
-        //filter: brightness(0.4);
-        //filter: contrast(200%);
-        //filter: drop-shadow(16px 16px 20px blue);
-        filter:grayscale(100%) drop-shadow(0 0 10px #000) brightness(90%);
-        -webkit-filter:grayscale(100%) drop-shadow(0 0 10px #000) brightness(90%);
-}
+      }
     }
   }
 
@@ -55,6 +47,7 @@ body {
       .name {
         color: $color-title;
         font-size: 3.6rem;
+        font-weight:300;
         margin: 0;
         padding: 0;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
@@ -88,8 +81,8 @@ body {
         text-transform: uppercase;
       }
       .description {
-        font-size: 1.22rem;
         color: $color-description;
+        font-size: 1.22rem;
         font-size: 1.10rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
@@ -106,10 +99,10 @@ body {
         text-transform: uppercase;
       }
       .description {
-        position: relative;
-        font-size: 1rem;
         color: $color-description;
+        font-size: 1rem;
         font-size: 1.10rem;
+        position: relative;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -125,10 +118,10 @@ body {
         text-transform: uppercase;
       }
       .description {
-        position: relative;
-        font-size: 1rem;
         color: $color-description;
+        font-size: 1rem;
         font-size: 1.10rem;
+        position: relative;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -144,10 +137,10 @@ body {
         text-transform: uppercase;
       }
       .description {
-        position: relative;
-        font-size: 1rem;
         color: $color-description;
+        font-size: 1rem;
         font-size: 1.10rem;
+        position: relative;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -163,41 +156,125 @@ body {
         text-transform: uppercase;
       }
       .description {
-        position: relative;
-        font-size: 1rem;
         color: $color-description;
         font-size: 1.10rem;
+        position: relative;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
       }
     }
     ul li {
-      width: 100%;
-      position: static;
       background:#e0a80d;
       box-shadow: 0 0 0 6px#2d2e2e;
+      position: static;
+      width: 100%;
     }
     .bullet{
-      height: 10px;
-      width: 10px;
-      position: static;
+      background:#e0a80d;
       //left: -31px;
       //top: 3px;
       border-radius: 50%;
-      background:#e0a80d;
       box-shadow:0 0 0 6px #2d2e2e;
+      height: 10px;
+      position: static;
+      width: 10px;
     }
   }
 
-  .footer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    padding: 1rem;
-    align-content: flex-end;
-    .details {
-      display: flex;
-      justify-content: space-between;
-      font-size: 0.875em;
-    }  
+.footer {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  padding: 1rem;
+  .details {
+    display: flex;
+    font-size: 0.875em;
+    justify-content: space-between;
+    .code{
+      color:#e0a80d;
+      font-weight: 700;
+    }
+  }  
+}
+
+.spinner {
+  align-items: center;
+  background-color: #1D1F20;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.loader  {
+  animation: rotate 1s infinite;  
+  height: 50px;
+  width: 50px;
+}
+
+.loader:before,
+.loader:after {   
+  border-radius: 50%;
+  content: '';
+  display: block;
+  height: 20px;  
+  width: 20px;
+}
+.loader:before {
+  animation: ball1 1s infinite;  
+  background-color: #cb2025;
+  box-shadow: 30px 0 0 #f8b334;
+  margin-bottom: 10px;
+}
+.loader:after {
+  animation: ball2 1s infinite; 
+  background-color: #00a096;
+  box-shadow: 30px 0 0 #97bf0d;
+}
+
+@keyframes rotate {
+  0% { 
+    -webkit-transform: rotate(0deg) scale(0.8); 
+    -moz-transform: rotate(0deg) scale(0.8);
   }
+  50% { 
+    -webkit-transform: rotate(360deg) scale(1.2); 
+    -moz-transform: rotate(360deg) scale(1.2);
+  }
+  100% { 
+    -webkit-transform: rotate(720deg) scale(0.8); 
+    -moz-transform: rotate(720deg) scale(0.8);
+  }
+}
+
+@keyframes ball1 {
+  0% {
+    box-shadow: 30px 0 0 #f8b334;
+  }
+  50% {
+    box-shadow: 0 0 0 #f8b334;
+    margin-bottom: 0;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #f8b334;
+    margin-bottom: 10px;
+  }
+}
+
+@keyframes ball2 {
+  0% {
+    box-shadow: 30px 0 0 #97bf0d;
+  }
+  50% {
+    box-shadow: 0 0 0 #97bf0d;
+    margin-top: -20px;
+    -webkit-transform: translate(15px,15px);
+    -moz-transform: translate(15px, 15px);
+  }
+  100% {
+    box-shadow: 30px 0 0 #97bf0d;
+    margin-top: 0;
+  }
+}
+

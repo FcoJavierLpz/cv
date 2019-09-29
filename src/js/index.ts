@@ -1,6 +1,4 @@
 import '../sass/style.scss';
-import {greet} from './app';
+import {loading} from './app';
 
-let name = 'Francisco'
-
-console.log(`Hi ${greet(name)}`);
+loading();
