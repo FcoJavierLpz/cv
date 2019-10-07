@@ -1,3 +1,13 @@
+
+@mixin border-radius($radius){
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+          border-radius: $radius;
+}
+
+$animation-delay: .7s;
+
 body {
     background-color: $color-background-primary;
     color: $color-description;
@@ -138,9 +148,92 @@ body {
         color: $color-description;
         font-size: 1.10rem;
         position: relative;
+        padding:1rem;
+        margin-bottom: .8rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
+        .progressbar-title{
+          padding: .1rem;
+          color: $progressbar-title-color;
+          display: flex;
+          align-items: center;
+          h3{
+            display: inline-block;
+          }
+          .percent{
+            position: absolute;
+            right: 1.3rem;
+          }
+        }
+        .bar-container{
+          background: #555;
+          position: relative;
+          width: 100%;
+          height: 5px;
+          margin-top: 5px;
+          display: block;
+          @include border-radius(5px);
+          
+          .progressbar{
+            position:absolute;
+            width:0%;
+            height: 100%;
+            background-color: $color-subtitle;
+            @include border-radius(5px);
+    
+            -webkit-animation-duration: 2s;
+            animation-duration: 2s;
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+          }
+          #progress-html{
+            -webkit-animation-name: progress-html;
+            animation-name: progress-html;
+            -webkit-animation-delay: $animation-delay;
+            animation-delay: $animation-delay;
+          }
+    
+          #progress-css{
+            -webkit-animation-name: progress-css;
+            animation-name: progress-css;
+            -webkit-animation-delay: $animation-delay*2;
+            animation-delay: $animation-delay*2;
+          }
+    
+          #progress-javascript{
+            -webkit-animation-name: progress-javascript;
+            animation-name: progress-javascript;
+            -webkit-animation-delay:$animation-delay*3;
+            animation-delay: $animation-delay*3;
+          }
+          #progress-php{
+            -webkit-animation-name: progress-php;
+            animation-name: progress-php;
+            -webkit-animation-delay:$animation-delay*3;
+            animation-delay: $animation-delay*3;
+          }
+          #progress-angular{
+            -webkit-animation-name: progress-angular;
+            animation-name: progress-angular;
+            -webkit-animation-delay:$animation-delay*3;
+            animation-delay: $animation-delay*3;
+          }
+          #progress-node{
+            -webkit-animation-name: progress-node;
+            animation-name: progress-node;
+            -webkit-animation-delay:$animation-delay*3;
+            animation-delay: $animation-delay*3;
+          }
+          #progress-react{
+            -webkit-animation-name: progress-react;
+            animation-name: progress-react;
+            -webkit-animation-delay:$animation-delay*3;
+            animation-delay: $animation-delay*3;
+          }
+        }// end bar-container
       }
     }
     .portfolio {
@@ -160,12 +253,6 @@ body {
           font-size: 0.875em;
         }
       }
-    }
-    ul li {
-      background:#e0a80d;
-      box-shadow: 0 0 0 6px#2d2e2e;
-      position: static;
-      width: 100%;
     }
     .bullet{
       background:#e0a80d;
@@ -196,10 +283,10 @@ body {
 }
 
 .spinner {
-  align-items: center;
   background-color: #1D1F20;
   display: flex;
   justify-content: center;
+  align-items: center;
   height: 100%;
 }
 
@@ -276,3 +363,18 @@ body {
   }
 }
 
+@-moz-keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@-moz-keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
+@-moz-keyframes progress-javascript{0%{width: 0%;} 100%{ width: 70%;}}
+@-moz-keyframes progress-php{0%{width: 0%;} 100%{ width: 55%;}}
+@-moz-keyframes progress-angular{0%{width: 0%;} 100%{ width: 65%;}}
+@-moz-keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
+@-moz-keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}
+
+@keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
+@keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
+@keyframes progress-javascript{0%{width: 0%;} 100%{ width: 70%;}}
+@keyframes progress-php{0%{width: 0%;} 100%{ width: 55%;}}
+@keyframes progress-angular{0%{width: 0%;} 100%{ width: 65%;}}
+@keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
+@keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}

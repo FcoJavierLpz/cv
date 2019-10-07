@@ -1,4 +1,5 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -6,16 +7,16 @@
     <link rel="stylesheet" href="./dist/css/style.css">
     <title>CV - Francisco J. López</title>
 </head>
+
 <body>
     <div class="spinner">
         <div class="loader"></div>
     </div>
-    <div class="container">
+    <div class="container" style="display: none;">
         <header class="header">
             <div class="section-one">
                 <figure>
-                    <img src="./src/images/pixel_paco.png"
-                            alt="Profile - Francisco J. López">
+                    <img src="./src/images/pixel_paco.png" alt="Profile - Francisco J. López">
                 </figure>
             </div>
             <div class="section-two">
@@ -29,13 +30,19 @@
             <div class="about-me">
                 <h2 class="title">About me</h2>
                 <p class="description">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas obcaecati debitis reprehenderit at consectetur vel! Beatae voluptas repudiandae quaerat animi hic, sed neque culpa quam debitis inventore ad quidem fugit.
-                    Culpa, rerum autem. Voluptates nisi assumenda officiis facilis. Veritatis, labore ut inventore ipsam sint nihil doloribus consequatur aliquid deserunt molestiae tenetur repellat, quis cupiditate. Ratione saepe dicta iure in sunt.
-                    Delectus dicta voluptas quam non. Voluptatum tempora nobis ullam, quas incidunt odit tenetur ad. Vero est ad quidem necessitatibus ut tempora esse soluta cum? Eligendi impedit cupiditate excepturi libero cumque.
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas obcaecati debitis reprehenderit at
+                    consectetur vel! Beatae voluptas repudiandae quaerat animi hic, sed neque culpa quam debitis
+                    inventore ad quidem fugit.
+                    Culpa, rerum autem. Voluptates nisi assumenda officiis facilis. Veritatis, labore ut inventore ipsam
+                    sint nihil doloribus consequatur aliquid deserunt molestiae tenetur repellat, quis cupiditate.
+                    Ratione saepe dicta iure in sunt.
+                    Delectus dicta voluptas quam non. Voluptatum tempora nobis ullam, quas incidunt odit tenetur ad.
+                    Vero est ad quidem necessitatibus ut tempora esse soluta cum? Eligendi impedit cupiditate excepturi
+                    libero cumque.
                 </p>
             </div>
         </section>
-        <section class="content"> 
+        <section class="content">
             <div class="work-experience">
                 <h2 class="title">Work Experience</h2>
                 <div class="description">
@@ -43,33 +50,79 @@
                 </div>
             </div>
             <div class="education">
-                    <h2 class="title">Education</h2>
-                    <p class="description">
-                        <div class="bullet"></div>
-                    </p>
-                </div>
+                <h2 class="title">Education</h2>
+                <p class="description">
+                    <div class="bullet"></div>
+                </p>
+            </div>
         </section>
         <section class="content">
             <div class="skills">
                 <h2 class="title">Skills</h2>
-                <p class="description">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </p>
-            </div>
+                <div class="description">
+                    <div>
+                        <div class="progressbar-title">
+                            <h3>HTML5</h3>
+                            <span class="percent" id="html-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressred" id="progress-html"></span>
+                        </div>
+                        <div class="progressbar-title">
+                            <h3>CSS / SASS</h3>
+                            <span class="percent" id="css-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressblue" id="progress-css"></span>
+                        </div>
+                        <div class="progressbar-title">
+                            <h3>JavaScript / jQuery</h3>
+                            <span class="percent" id="javascript-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progresspurple" id="progress-javascript"></span>
+                        </div>
+                        <div class="progressbar-title">
+                            <h3>PHP</h3>
+                            <span class="percent" id="php-pourcent"></span>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="bar-container">
+                            <span class="progressbar progressorange" id="progress-php"></span>
+                        </div>
+                        <div class="progressbar-title">
+                            <h3>Angular</h3>
+                            <span class="percent" id="angular-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressgreen" id="progress-angular">
+                        </div>
+                        <div class="progressbar-title">
+                            <h3>Node.js</h3>
+                            <span class="percent" id="node-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressgreen" id="progress-node">
+                        </div>
+                        <div class="progressbar-title">
+                            <h3>React</h3>
+                            <span class="percent" id="react-pourcent"></span>
+                        </div>
+                        <div class="bar-container">
+                            <span class="progressbar progressgreen" id="progress-react">
+                        </div>
+                    </div>
+
+                </div>
         </section>
         <section class="content">
             <div class="portfolio">
                 <h2 class="title">Portfolio</h2>
                 <p class="description">
-                    Gallery
                 </p>
             </div>
         </section>
-
         <footer class="footer">
             <div class="details">
                 <div class="copyright">© 2019</div>
@@ -79,4 +132,5 @@
     </div>
     <script src="./dist/js/bundle.js"></script>
 </body>
+
 </html>
