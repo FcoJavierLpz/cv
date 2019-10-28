@@ -14,7 +14,8 @@ var lang = {
     "php": "55%",
     "angular": "65%",
     "node": "75%",
-    "react": "85%"
+    "react": "85%",
+    "git": "80%"
   };
   
   var multiply = 4;

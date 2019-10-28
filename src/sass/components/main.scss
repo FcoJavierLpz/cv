@@ -17,7 +17,7 @@ body {
 
   .container {
     display: grid;
-    grid-auto-rows: 1fr;
+    // grid-auto-rows: 1fr;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(3, auto);
     margin: 0 auto;
@@ -112,6 +112,7 @@ body {
         color: $color-description;
         font-size: 1.10rem;
         position: relative;
+        padding-left: 1rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -130,6 +131,7 @@ body {
         color: $color-description;
         font-size: 1.10rem;
         position: relative;
+        padding-left: 1rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -148,22 +150,21 @@ body {
         color: $color-description;
         font-size: 1.10rem;
         position: relative;
-        padding:1rem;
         margin-bottom: .8rem;
+        display: grid;
+        padding: 0;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        grid-gap: 2rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
         .progressbar-title{
-          padding: .1rem;
           color: $progressbar-title-color;
           display: flex;
           align-items: center;
+          justify-content: space-between;
           h3{
             display: inline-block;
-          }
-          .percent{
-            position: absolute;
-            right: 1.3rem;
           }
         }
         .bar-container{
@@ -233,6 +234,12 @@ body {
             -webkit-animation-delay:$animation-delay*3;
             animation-delay: $animation-delay*3;
           }
+          #progress-git{
+            -webkit-animation-name: progress-git;
+            animation-name: progress-git;
+            -webkit-animation-delay:$animation-delay*3;
+            animation-delay: $animation-delay*3;
+          }
         }// end bar-container
       }
     }
@@ -255,14 +262,11 @@ body {
       }
     }
     .bullet{
-      background:#e0a80d;
-      //left: -31px;
-      //top: 3px;
-      border-radius: 50%;
-      box-shadow:0 0 0 6px #2d2e2e;
-      height: 10px;
-      position: static;
-      width: 10px;
+      color:$color-bullet;
+      display: flow-root list-item;
+      .item {
+        color: $color-description;
+      }
     }
   }
 
@@ -370,6 +374,7 @@ body {
 @-moz-keyframes progress-angular{0%{width: 0%;} 100%{ width: 65%;}}
 @-moz-keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
 @-moz-keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}
+@-moz-keyframes progress-git{0%{width: 0%;} 100%{ width: 80%;}}
 
 @keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
 @keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
@@ -378,3 +383,4 @@ body {
 @keyframes progress-angular{0%{width: 0%;} 100%{ width: 65%;}}
 @keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
 @keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}
+@keyframes progress-git{0%{width: 0%;} 100%{ width: 80%;}}
