@@ -264,6 +264,7 @@ body {
     .bullet{
       color:$color-bullet;
       display: flow-root list-item;
+      display: list-item;
       .item {
         color: $color-description;
       }
