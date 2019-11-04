@@ -112,7 +112,7 @@ body {
         color: $color-description;
         font-size: 1.10rem;
         position: relative;
-        padding-left: 1rem;
+        padding-left: .5rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -131,7 +131,7 @@ body {
         color: $color-description;
         font-size: 1.10rem;
         position: relative;
-        padding-left: 1rem;
+        padding-left: .5rem;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium){
           font-size: 0.875em;
         }
@@ -261,12 +261,27 @@ body {
         }
       }
     }
-    .bullet{
-      color:$color-bullet;
-      display: flow-root list-item;
-      display: list-item;
+    .bullets {
+      border-left: 2px solid $color-line;
+      padding-left: 33px;
       .item {
-        color: $color-description;
+        margin: 35px 0;
+        @media screen and (min-width: $break-xs) and (max-width: $break-medium){
+          margin: 1rem 0;
+        }
+        position: relative;
+        &::before{
+          content: '';
+          position: absolute;
+          left: -40px;
+          top: 7px;
+          width: 10px;
+          height: 10px;
+          border: 1px solid $color-bullet;
+          border-radius: 50%;
+          background-color: $color-bullet;
+          box-shadow: 0 0 0 7.5px $color-background-primary;
+        }
       }
     }
   }
