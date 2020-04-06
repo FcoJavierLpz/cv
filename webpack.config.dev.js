@@ -39,14 +39,11 @@ module.exports = {
         exclude: /node_modules/,
       },
       {
-        test: /\.(jpe?g|png|gif|woff|woff2|eot|ttf|svg)(\?[a-z0-9=.]+)?$/,
-        loader: "url-loader?limit=100000",
-      },
-      {
         test: /\.(png|jpe?g|gif)$/,
         loader: "file-loader",
         options: {
           name: "[name].[ext]?[hash]",
+          publicPath: "src/images",
         },
       },
       {
