@@ -1,11 +1,4 @@
 
-@mixin border-radius($radius){
-  -webkit-border-radius: $radius;
-     -moz-border-radius: $radius;
-      -ms-border-radius: $radius;
-          border-radius: $radius;
-}
-
 $animation-delay: .7s;
 
 body {
@@ -66,7 +59,7 @@ body {
       }
       .description {
         color: $color-subtitle;
-        font-size: 1.8rem; 
+        font-size: 1.8rem;
         margin: 0;
         padding: 0;
         @media screen and (min-width: $break-xs) and (max-width: $break-medium) {
@@ -175,14 +168,14 @@ body {
           margin-top: 5px;
           display: block;
           @include border-radius(5px);
-          
+
           .progressbar{
             position:absolute;
             width:0%;
             height: 100%;
             background-color: $color-subtitle;
             @include border-radius(5px);
-    
+
             -webkit-animation-duration: 2s;
             animation-duration: 2s;
             -webkit-animation-timing-function: ease-out;
@@ -196,14 +189,14 @@ body {
             -webkit-animation-delay: $animation-delay;
             animation-delay: $animation-delay;
           }
-    
+
           #progress-css{
             -webkit-animation-name: progress-css;
             animation-name: progress-css;
             -webkit-animation-delay: $animation-delay*2;
             animation-delay: $animation-delay*2;
           }
-    
+
           #progress-javascript{
             -webkit-animation-name: progress-javascript;
             animation-name: progress-javascript;
@@ -299,7 +292,7 @@ body {
       color:#e0a80d;
       font-weight: 700;
     }
-  }  
+  }
 }
 
 .spinner {
@@ -311,92 +304,28 @@ body {
 }
 
 .loader  {
-  animation: rotate 1s infinite;  
+  animation: rotate 1s infinite;
   height: 50px;
   width: 50px;
 }
 
 .loader:before,
-.loader:after {   
+.loader:after {
   border-radius: 50%;
   content: '';
   display: block;
-  height: 20px;  
+  height: 20px;
   width: 20px;
 }
 .loader:before {
-  animation: ball1 1s infinite;  
+  animation: ball1 1s infinite;
   background-color: #cb2025;
   box-shadow: 30px 0 0 #f8b334;
   margin-bottom: 10px;
 }
 .loader:after {
-  animation: ball2 1s infinite; 
+  animation: ball2 1s infinite;
   background-color: #00a096;
   box-shadow: 30px 0 0 #97bf0d;
 }
 
-@keyframes rotate {
-  0% { 
-    -webkit-transform: rotate(0deg) scale(0.8); 
-    -moz-transform: rotate(0deg) scale(0.8);
-  }
-  50% { 
-    -webkit-transform: rotate(360deg) scale(1.2); 
-    -moz-transform: rotate(360deg) scale(1.2);
-  }
-  100% { 
-    -webkit-transform: rotate(720deg) scale(0.8); 
-    -moz-transform: rotate(720deg) scale(0.8);
-  }
-}
-
-@keyframes ball1 {
-  0% {
-    box-shadow: 30px 0 0 #f8b334;
-  }
-  50% {
-    box-shadow: 0 0 0 #f8b334;
-    margin-bottom: 0;
-    -webkit-transform: translate(15px,15px);
-    -moz-transform: translate(15px, 15px);
-  }
-  100% {
-    box-shadow: 30px 0 0 #f8b334;
-    margin-bottom: 10px;
-  }
-}
-
-@keyframes ball2 {
-  0% {
-    box-shadow: 30px 0 0 #97bf0d;
-  }
-  50% {
-    box-shadow: 0 0 0 #97bf0d;
-    margin-top: -20px;
-    -webkit-transform: translate(15px,15px);
-    -moz-transform: translate(15px, 15px);
-  }
-  100% {
-    box-shadow: 30px 0 0 #97bf0d;
-    margin-top: 0;
-  }
-}
-
-@-moz-keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
-@-moz-keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
-@-moz-keyframes progress-javascript{0%{width: 0%;} 100%{ width: 70%;}}
-@-moz-keyframes progress-php{0%{width: 0%;} 100%{ width: 55%;}}
-@-moz-keyframes progress-angular{0%{width: 0%;} 100%{ width: 65%;}}
-@-moz-keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
-@-moz-keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}
-@-moz-keyframes progress-git{0%{width: 0%;} 100%{ width: 80%;}}
-
-@keyframes progress-html{0%{width: 0%;} 100%{ width: 100%;}}
-@keyframes progress-css{0%{width: 0%;} 100%{ width: 90%;}}
-@keyframes progress-javascript{0%{width: 0%;} 100%{ width: 70%;}}
-@keyframes progress-php{0%{width: 0%;} 100%{ width: 55%;}}
-@keyframes progress-angular{0%{width: 0%;} 100%{ width: 65%;}}
-@keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
-@keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}
-@keyframes progress-git{0%{width: 0%;} 100%{ width: 80%;}}

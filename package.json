@@ -4,9 +4,7 @@
   "description": "web resume online",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --config ./webpack.config.dev.js --progress --colors --open",
-    "build": "webpack --config ./webpack.config.prod.js -p --progress --colors"
+    "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
     "type": "git",
@@ -23,20 +21,6 @@
   },
   "homepage": "https://github.com/FcoJavierLpz/cv#readme",
   "devDependencies": {
-    "clean-webpack-plugin": "^3.0.0",
-    "css-loader": "^3.2.0",
-    "file-loader": "^4.3.0",
-    "html-webpack-plugin": "^3.2.0",
-    "mini-css-extract-plugin": "^0.8.0",
-    "node-sass": "^4.12.0",
-    "sass-loader": "^8.0.0",
-    "serialize-javascript": "^2.1.2",
-    "style-loader": "^1.0.0",
-    "ts-loader": "^6.1.0",
-    "typescript": "^3.6.3",
-    "url-loader": "^2.1.0",
-    "webpack": "^4.39.3",
-    "webpack-cli": "^3.3.8",
-    "webpack-dev-server": "^3.8.0"
+    "node-sass": "^4.14.1"
   }
 }
