@@ -62,3 +62,17 @@
 @keyframes progress-node{0%{width: 0%;} 100%{ width: 85%;}}
 @keyframes progress-react{0%{width: 0%;} 100%{ width: 75%;}}
 @keyframes progress-git{0%{width: 0%;} 100%{ width: 80%;}}
+
+.typing {
+  width: 22.1875rem;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 2px solid #e0a80d;
+  animation: typing 2s steps(12, end), cursor .6s steps(12, end) infinite;
+}
+@keyframes typing {
+  from { width: 0 }
+}
+@keyframes cursor {
+  50% { border-color: transparent }
+}
