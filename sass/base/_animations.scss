@@ -69,6 +69,9 @@
   white-space: nowrap;
   border-right: 2px solid #e0a80d;
   animation: typing 2s steps(12, end), cursor .6s steps(12, end) infinite;
+  @media screen and (min-width: $break-xs) and (max-width: $break-medium) {
+    width: 13.2rem;
+  }
 }
 @keyframes typing {
   from { width: 0 }
